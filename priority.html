@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Priority Order Demo</title>
+
+  <style>
+    /* STEP 1️⃣: Element selector (lowest priority) */
+    p {
+      color: blue;
+    }
+
+    /* STEP 2️⃣: Class selector (stronger than element) */
+    /* Uncomment this to see class selector override element selector */
+    /*
+    .highlight {
+      color: red;
+    }
+    */
+
+    /* STEP 3️⃣: ID selector (stronger than class) */
+    /* Uncomment this to see ID selector override class selector */
+    /*
+    #special {
+      color: green;
+    }
+    */
+
+    /* STEP 4️⃣: !important (strongest of all) */
+    /* Uncomment this to see !important override everything */
+    /*
+    p {
+      color: purple !important;
+    }
+    */
+  </style>
+</head>
+<body>
+
+  <h2>CSS Priority Demo</h2>
+
+  <!-- Inline Style Example (comment/uncomment to test inline vs CSS) -->
+  <p id="special" class="highlight" style="color: orange;">
+    Paragraph 1 - This has inline style (orange).
+  </p>
+
+  <p class="highlight" id="special">
+    Paragraph 2 - This does not have inline style.
+  </p>
+
+</body>
+</html>
