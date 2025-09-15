@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frameset Layout</title>
+</head>
+<frameset rows="25%,*" border="10">
+  <!-- Top row for Advertisement -->
+  <frame src="adv.html" name="topFrame" scrolling="no" noresize>
+
+  <!-- Remaining space split into left (menu) and right (content) -->
+  <frameset cols="200px,*" border="12">
+    <!-- Left column for Menu -->
+    <frame src="left_menu.html" name="leftFrame">
+
+    <!-- Right column for Content, target of menu links -->
+    <frame src="welcome.html" name="rightFrame">
+  </frameset>
+</frameset>
