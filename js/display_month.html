@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display this month.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var d = new Date();
+  var months = ["January","February","March","April","May","June",
+                "July","August","September","October","November","December"];
+  var n = months[d.getMonth()];
+  document.getElementById("demo").innerHTML = n;
+}
+</script>
+
+</body>
+</html>

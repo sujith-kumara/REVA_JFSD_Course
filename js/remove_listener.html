@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>removeEventListener() Example</h2>
+
+<p id="demo">Move your mouse over this text to change its color.</p>
+<button onclick="removeHandler()">Stop Changing Color</button>
+
+<script>
+// Select the element
+let text = document.getElementById("demo");
+
+// Define the function that toggles colors
+function changeColor() {
+  if (text.style.color === "red") {
+    text.style.color = "blue";
+  } else {
+    text.style.color = "red";
+  }
+}
+
+// Attach the event listener
+text.addEventListener("mousemove", changeColor);
+
+// Function to remove the event listener
+function removeHandler() {
+  text.removeEventListener("mousemove", changeColor);
+  alert("Mousemove event removed!");
+}
+</script>
+
+</body>
+</html>
