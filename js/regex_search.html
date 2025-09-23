@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Search the string "Visit W3Schools!" for "w3Schools" and show the position:</p>
+
+<!-- When this button is clicked, it will run our function -->
+<button onclick="searchText()">Try it</button>
+
+<!-- This paragraph is empty now; we’ll fill it with the result -->
+<p id="result"></p>
+
+<script>
+// Define a function that runs when the button is clicked
+function searchText() {
+  // The text we want to search in
+  let sentence = "Visit W3Schools!";
+
+  // Search for the word "w3Schools" (ignoring uppercase/lowercase using 'i')
+  let position = sentence.search(/w3Schools/i);
+
+  // Show the result in the <p> tag with id="result"
+  document.getElementById("result").innerHTML =
+    "The word was found at position: " + position;
+}
+</script>
+
+</body>
+</html>
