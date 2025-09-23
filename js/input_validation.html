@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <p>Please input a number between 5 and 10:</p>
+
+  <!-- Input box for number with restrictions (min=5, max=10, step=1) -->
+  <input id="demo" type="number" min="5" max="10" step="1">
+  
+  <!-- Button to test the input -->
+  <button type="button" onclick="myFunction()">Test Input</button>
+
+  <!-- Place where we will show error messages -->
+  <p id="message"></p>
+
+  <script>
+    function myFunction() {
+      let message, x;
+
+      // Get reference to <p id="message">
+      message = document.getElementById("message");
+
+      // Clear any previous message
+      message.innerHTML = "";
+
+      // Get value entered in input box
+      x = document.getElementById("demo").value;
+
+      try {
+        // If empty, throw error
+        if (x == "") throw "empty";
+
+        // If not a number, throw error
+        if (isNaN(x)) throw "not a number";
+
+        // Convert to number type
+        x = Number(x);
+
+        // Check range conditions
+        if (x < 5) throw "too low";
+        if (x > 10) throw "too high";
+
+        // If everything is correct, show success
+        message.innerHTML = "Input is valid ✅";
+      } 
+      catch(err) {
+        // Display the error message
+        message.innerHTML = "Input is " + err;
+      }
+    }
+  </script>
+</body>
+</html>
