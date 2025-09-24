@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Address Validation</title>
+</head>
+<body>
+  <h3>Enter Address:</h3>
+  <form onsubmit="return alphanumeric(document.getElementById('uadd'))">
+    <input type="text" id="uadd" placeholder="Enter address">
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function alphanumeric(uadd) {
+      var letters = /^[0-9a-zA-Z]+$/; // only a-z, A-Z, 0-9
+    //   var letters = /^[0-9a-zA-Z\s,.-]+$/;
+      if (uadd.value.match(letters)) {
+        alert("Valid address ✅");
+        return true;
+      } else {
+        alert("User address must have alphanumeric characters only");
+        uadd.focus();
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
